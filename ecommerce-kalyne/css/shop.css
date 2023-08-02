@@ -62,3 +62,20 @@ body {
 .card:hover .buy-button {
     display: block;
 }
+
+.fas{
+    font-size: 2em;
+    margin: 30px 0 0 30px;
+}
+
+.voltar{
+    background-color: transparent;
+    border: none;
+    color: #7D341D;
+}
+
+.voltar:hover{
+    color: #E7B392;
+    cursor: pointer;
+    transition: color .8s ease-in-out;
+}

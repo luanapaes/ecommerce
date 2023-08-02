@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <script src="https://kit.fontawesome.com/0f251f1c56.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/ecommerce-kalyne/css/shop.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,9 @@
 </head>
 <body>
     <div class="gridContainer">
+        <button onclick="voltar()" class="voltar">
+            <i class="fas fa-arrow-left"></i>
+        </button>
         <h1>Produtos Natura</h1>
         <div class="natura">
             <div class="card">
@@ -66,7 +70,7 @@
                 <i>ou 3x de R$33,33</i>
                 <button class="buy-button">Clique para comprar</button>
             </div>
-            <div class="card">
+            <div class="card" id="tododia-algodao">
                 <img src="/ecommerce-kalyne/image/img-index/kit-natura-removebg-preview.png" alt="">
                 <h2>Kit Tododia Algodão</h2>
                 <p>R$99,99</p>
@@ -76,6 +80,6 @@
         </div>
     </div>
 
-    <script src="/js/script.js"></script>
+    <script src="/ecommerce-kalyne/js/script.js"></script>
 </body>
 </html>

@@ -9,3 +9,7 @@ buyButtons.forEach(button => {
     alert('Você clicou no botão de comprar do produto: ' + productName);
   });
 });
+
+function voltar(){
+  window.location = 'index.html';
+}
