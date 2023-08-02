@@ -133,6 +133,10 @@ body {
     margin-bottom: 50px;
 }
 
+.item-5 h1{
+    margin-top: 8%;
+}
+
 .gridCards {
     width: 100%;
     flex-direction: row;
@@ -155,11 +159,11 @@ body {
 .item-6 {
     margin: 0 auto;
     width: 90%;
-    background: linear-gradient(0deg, rgba(250,229,212,1) 5%, rgba(251,247,245,1) 100%);
 }
 
 .item-6 h1 {
     text-align: center;
+    margin-top: 10%;
 }
 
 .cont {
