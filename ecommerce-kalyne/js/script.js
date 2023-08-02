@@ -13,3 +13,14 @@ buyButtons.forEach(button => {
 function voltar(){
   window.location = 'index.html';
 }
+
+
+document.getElementById('link-transicao').addEventListener('click', function(event) {
+  event.preventDefault();
+  
+  const targetId = this.getAttribute('href').substring(1); 
+
+  const targetElement = document.getElementById(targetId);
+
+  targetElement.scrollIntoView({ behavior: 'smooth' });
+});
