@@ -56,11 +56,9 @@ function mascaraMoeda(campo, evento) {
   campo.value = resultado.reverse();
 }
 
-function formatarMoeda(input) {
-  let valor = input.value.replace(/\D/g, ""); // Remove todos os caracteres não numéricos
-  valor = (valor / 100).toFixed(2); // Divide por 100 e formata para 2 casas decimais
 
-  input.value = `${valor.replace(".", ",")}`; // Adiciona "R$" e substitui o ponto por vírgula
+function entrar(){
+  window.location = 'login.html';
 }
 
 

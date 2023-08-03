@@ -182,3 +182,21 @@ body {
     width: 33%;
     border-radius: 0;
 }
+
+
+.btn-admin{
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    color: #7D341D;
+}
+
+.fa-star{
+    font-size: 1em;
+}
+
+.fa-star:hover {
+    color: #f3ceb7;
+    transition: all .6s ease-out;
+    cursor: pointer;
+}
