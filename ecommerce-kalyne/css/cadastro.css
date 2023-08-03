@@ -1,0 +1,57 @@
+.title-cadastro{
+    text-align: center;
+}
+
+#uploaded-image {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.btn-card{
+    display: block;
+    margin: 15px auto;  
+    color: #7D341D;
+    margin-bottom: 25px;
+    width: 165px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background-color: #E7B392;  
+}
+
+.btn-card:hover {
+    background-color: #f6c3a3;
+    transition: all .4s ease-in;
+    cursor: pointer;
+}
+
+#upload-input{
+    border-right: 3p;
+    margin: 10px 0;
+}
+
+.cardCadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.input, #select{
+    width: 25vw;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid saddlebrown;
+    outline: none;
+    color: saddlebrown;
+}
+
+
+
+

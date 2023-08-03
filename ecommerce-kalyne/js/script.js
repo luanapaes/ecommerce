@@ -22,15 +22,46 @@ function handleBuyButtonClick(event) {
 
   const mensagem = `Quero o produto "${produto}". Como faço para adquiri-lo?`;
 
-  const numeroWhatsApp = "558198661064";
+  const numeroWhatsApp = "558186661064";
 
-  const urlWhatsApp = `https://api.whatsapp.com/send?phone=&text=${encodeURIComponent(mensagem)}`;
+  const urlWhatsApp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensagem)}`;
 
-  window.location.href = urlWhatsApp;
+  window.open(urlWhatsApp, "_blank");
 }
+
 
 buyButtons.forEach(button => {
   button.addEventListener("click", handleBuyButtonClick);
 });
+
+String.prototype.reverse = function () {
+  return this.split('').reverse().join('');
+};
+
+function mascaraMoeda(campo, evento) {
+  var tecla = (!evento) ? window.event.keyCode : evento.which;
+  var valor = campo.value.replace(/[^\d]+/gi, '').reverse();
+  var resultado = "";
+  var mascara = "##.###.###,##".reverse();
+  for (var x = 0, y = 0; x < mascara.length && y < valor.length;) {
+    if (mascara.charAt(x) != '#') {
+      resultado += mascara.charAt(x);
+      x++;
+    } else {
+      resultado += valor.charAt(y);
+      y++;
+      x++;
+    }
+  }
+  campo.value = resultado.reverse();
+}
+
+function formatarMoeda(input) {
+  let valor = input.value.replace(/\D/g, ""); // Remove todos os caracteres não numéricos
+  valor = (valor / 100).toFixed(2); // Divide por 100 e formata para 2 casas decimais
+
+  input.value = `${valor.replace(".", ",")}`; // Adiciona "R$" e substitui o ponto por vírgula
+}
+
 
 

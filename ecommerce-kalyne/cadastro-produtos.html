@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Produtos</title>
+    <link rel="stylesheet" href="/ecommerce-kalyne/css/style.css">
+    <link rel="stylesheet" href="/ecommerce-kalyne/css/cadastro.css">
+    <link rel="stylesheet" href="/ecommerce-kalyne/css/shop.css">
+</head>
+
+<body>
+    <h1 class="title-cadastro">Cadastrar Produto</h1>
+    <div class="cardCadastro">
+        <div class="upload-container form card">
+            <div class="image-preview">
+                <img id="uploaded-image" src="#" alt="Imagem carregada">
+            </div>
+            <input type="file" id="upload-input" accept="image/*">
+        </div>
+
+        <div class="info">
+            <label for="nome-produto">Nome do produto</label>
+            <input class="input" type="text" name="nome-produto" id="nome-produto">
+
+            <label for="valor">Valor do produto</label>
+            <input class="input" type="text" id="valor-produto" oninput="formatarMoeda(this)">
+
+            <label for="valor">Valor parcelado</label>
+            <input class="input" type="text" id="valor-parcelado" oninput="formatarMoeda(this)">
+
+
+            <label for="select">Marca:</label>
+            <select name="select" id="select">
+                <option value="marca" disabled selected>Marca</option>
+                <option value="natura">Natura</option>
+                <option value="oboticario">oBoticário</option>
+                <option value="eudora">Eudora</option>
+                <option value="hinode">Hinode</option>
+            </select>
+
+            <button type="submit" class="btn-card">cadastrar produto</button>
+        </div>
+    </div>
+
+    <script src="/ecommerce-kalyne/js/carregar.js"></script>
+</body>
+
+</html>

@@ -29,7 +29,7 @@ body {
 }
 
 .item-1 button,
-.contato {
+.contato, .enter {
     color: #7D341D;
     margin-bottom: 25px;
     width: 165px;
@@ -46,7 +46,7 @@ body {
 
 .item-1 button:hover,
 .btn-prod:hover,
-.contato:hover {
+.contato:hover, .enter:hover, .btn-cadastro {
     background-color: #f6c3a3;
     transition: all .4s ease-in;
     cursor: pointer;
