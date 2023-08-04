@@ -29,7 +29,7 @@ function cadastrarProduto() {
     const valorParcelado = document.getElementById('valor-parcelado').value;
     const imagemProduto = document.getElementById('uploaded-image').src;
 
-    // Criação do novo card com os dados do produto cadastrado
+    // cria o card com as informações do produto cadastrado
     const novoCard = document.createElement('div');
     novoCard.classList.add('card');
     novoCard.innerHTML = `
@@ -40,11 +40,10 @@ function cadastrarProduto() {
         <button class="buy-button" data-produto="${nomeProduto}">Clique para comprar</button>
     `;
 
-    // Insere o novo card na div correspondente à marca selecionada
-    const divMarca = document.getElementById(`marca-${marcaSelecionada.toLowerCase()}`);
+    const divMarca = document.querySelector(`[data-marca="${marcaSelecionada.toLowerCase()}"]`);
     if (divMarca) {
         divMarca.appendChild(novoCard);
     }
 }
 
-document.querySelector('.btn-card').addEventListener('click', cadastrarProduto());
+document.querySelector('.btn-cadastrar').addEventListener('click', cadastrarProduto);

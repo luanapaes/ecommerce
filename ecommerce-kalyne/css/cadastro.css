@@ -44,6 +44,7 @@
 }
 
 .input, #select{
+    padding-left: 10px;
     width: 25vw;
     height: 30px;
     border-radius: 5px;
@@ -52,6 +53,9 @@
     color: #7D341D;
 }
 
+#select option:hover{
+    background-color: red;
+}
 
 
 
