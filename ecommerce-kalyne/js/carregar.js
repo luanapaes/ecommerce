@@ -45,10 +45,10 @@ function cadastrarProduto() {
       divMarca.appendChild(novoCard);
     }
   
-    // Obter a lista de tarefas do localStorage ou criar uma nova lista vazia
+    // lista com os cards
     const taskList = JSON.parse(localStorage.getItem('tasks')) || [];
   
-    // Adicionar o novo card à lista de tarefas
+    // Adicionar o novo card à lista 
     const newTaskText = `${nomeProduto} ${valorProduto} ${valorParcelado}`;
     taskList.push(newTaskText);
     localStorage.setItem('tasks', JSON.stringify(taskList));
