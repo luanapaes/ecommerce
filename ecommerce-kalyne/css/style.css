@@ -150,6 +150,11 @@ body {
 
 }
 
+.gridCards img:hover, .produtos-fav img:hover {
+    transform: scale(1.02);
+    transition: all .3s ease-in-out;
+}
+
 .nameMarca {
     width: 100%;
     display: flex;

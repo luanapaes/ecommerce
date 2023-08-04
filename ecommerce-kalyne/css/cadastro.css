@@ -53,9 +53,19 @@
     color: #7D341D;
 }
 
-#select option:hover{
-    background-color: red;
+#select{
+    width: 26vw;
 }
+
+.btn-cadastrar{
+    margin: 20px auto;
+    border: 1px solid #7D341D;
+    border-radius: 5px;
+    background-color: #E7B392;
+    width: 15vw;
+    height: 5vh;
+}
+
 
 
 
