@@ -28,22 +28,32 @@ function cadastrarProduto() {
     const valorProduto = document.getElementById('valor-produto').value;
     const valorParcelado = document.getElementById('valor-parcelado').value;
     const imagemProduto = document.getElementById('uploaded-image').src;
-
+  
     // cria o card com as informações do produto cadastrado
     const novoCard = document.createElement('div');
     novoCard.classList.add('card');
     novoCard.innerHTML = `
-        <img src="${imagemProduto}" alt="">
-        <h2 class="titleCard">${nomeProduto}</h2>
-        <p id="preco">R$${valorProduto}</p>
-        <i>ou ${valorParcelado}</i>
-        <button class="buy-button" data-produto="${nomeProduto}">Clique para comprar</button>
+      <img src="${imagemProduto}" alt="">
+      <h2 class="titleCard">${nomeProduto}</h2>
+      <p id="preco">R$${valorProduto}</p>
+      <i>ou ${valorParcelado}</i>
+      <button class="buy-button" data-produto="${nomeProduto}">Clique para comprar</button>
     `;
-
-    const divMarca = document.querySelector(`[data-marca="${marcaSelecionada.toLowerCase()}"]`);
+  
+    const divMarca = document.querySelector(`[data-marca="${marcaSelecionada}"]`);
     if (divMarca) {
-        divMarca.appendChild(novoCard);
+      divMarca.appendChild(novoCard);
     }
-}
-
-document.querySelector('.btn-cadastrar').addEventListener('click', cadastrarProduto);
+  
+    // Obter a lista de tarefas do localStorage ou criar uma nova lista vazia
+    const taskList = JSON.parse(localStorage.getItem('tasks')) || [];
+  
+    // Adicionar o novo card à lista de tarefas
+    const newTaskText = `${nomeProduto} ${valorProduto} ${valorParcelado}`;
+    taskList.push(newTaskText);
+    localStorage.setItem('tasks', JSON.stringify(taskList));
+  }
+  
+  // Adicione o event listener para a função cadastrarProduto
+  document.querySelector('.btn-cadastrar').addEventListener('click', cadastrarProduto);
+  
