@@ -16,7 +16,7 @@ body {
 
 /*Capa inicial*/
 .item-1 {
-    background-image: url(/image/img-index/capa.jpg);
+    background-image: url(../image/img-index/capa.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -81,7 +81,7 @@ body {
 
 /*Imagem ilustração*/
 .item-3 {
-    background-image: url(/image/img-index/back-2.png);
+    background-image: url(../image/img-index/back-2.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 600px;

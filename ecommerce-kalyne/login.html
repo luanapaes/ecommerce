@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
+
 <head>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login.css">
@@ -7,21 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faça Login</title>
 </head>
-<body><h1>
+
+<body>
+    <h1>
     <div class="divCenter">
         <h1 class="title-login">Faça Login</h1>
-        <form class="form" action="/cadastro-produtos.html" method="get">
-        <label for="email" class="email">Login
-            <input type="email" name="email" id="email">
-        </label>
+        <form class="form" action="/cadastro-produtos.html" method="">
+            <label for="email" class="email">Login
+                <input type="email" name="email" id="email" value="">
+            </label>
 
-        <label for="password" class="pass">Senha
-            <input type="password" name="password" id="password">
-        </label>
-
-        <button type="submit" class="enter">Entrar</button>
-    </form>
+            <label for="password" class="pass">Senha
+                <input type="password" name="password" id="password" value="">
+            </label>
+            <button class="enter" onclick="telaCadastrarProdutos()">Entrar</button>
+        </form>
     </div>
-    
+        <script src="./js/script.js"></script>
 </body>
+
 </html>
