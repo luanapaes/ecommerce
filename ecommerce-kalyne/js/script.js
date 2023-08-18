@@ -35,8 +35,8 @@ function entrar() {
   window.location = 'login.html';
 }
 
-function telaCadastrarProdutos() {
-  window.location = '../index.html';
+function cdProdutos() {
+  window.location.href = 'cadastro-produtos.html';
 }
 
 
