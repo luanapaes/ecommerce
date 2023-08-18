@@ -24,49 +24,55 @@ function formatarMoeda(input) {
 
 //-----------------------------------------------------------------------
 //CADASTRO PRODUTOS
-function cadastrarProduto() {
-  alert('foi clicado');
+var arrProdutos = [];
 
-  var Produtos = (function (window) {
-    'use strict'
-    function _produto(marca, nome, valor, valorparcelado, imagem) {
-      this.marca = document.getElementById('#select').value;
-      this.nome = document.getElementById('#nome-produto').value;
-      this.valor = document.getElementById('#valor-produto').value;
-      this.valorParcelado = document.getElementById('#valor-parcelado').value;
-      this.imagem = document.getElementById('#uploaded-image').src;
+function criarCard() {
+  var nome = document.querySelector('#nome-produto').value;
+  var valor = document.querySelector('#valor-produto').value;
+  var valorParcelado = document.querySelector('#valor-parcelado').value;
+  var marcaSelecionada = document.querySelector('#select').value;
+  var imagemProduto = document.querySelector('#uploaded-image').src;
 
-      // cria o card com as informações do produto cadastrado
-      const novoCard = document.createElement('div');
-      novoCard.classList.add('card');
-      novoCard.innerHTML = `
-      <img src="${imagem}" alt="">
-      <h2 class="titleCard">${nome}</h2>
-      <p id="preco">R$${valor}</p>
-      <i>ou ${valorParcelado}</i>
-      <button class="buy-button" data-produto="${nome}">Clique para comprar</button>
+  function Produto(nome, valor, marcaSelecionada, valorParcelado, imagemProduto) {
+    this.nome = nome;
+    this.valor = valor;
+    this.marcaSelecionada = marcaSelecionada;
+    this.valorParcelado = valorParcelado;
+    this.imagemProduto = imagemProduto;
+  }
+
+  var novoProduto = new Produto(nome, valor, marcaSelecionada, valorParcelado, imagemProduto);
+  arrProdutos.push(novoProduto);
+
+  const cardContainer = document.getElementById('cardContainer');
+  const novoCard = document.createElement('div');
+  novoCard.classList.add('card');
+  novoCard.innerHTML = `
+        <img src="${novoProduto.imagemProduto}">
+        <h2 class="titleCard">${novoProduto.nome}</h2>
+        <p id="preco">R$${novoProduto.valor}</p>
+        <i>ou ${novoProduto.valorParcelado}</i>
+        <button class="buy-button" data-produto="${novoProduto.nome}">Clique para comprar</button>
     `;
+  const divMarca = document.querySelector(`[data-marca="${marcaSelecionada}"]`);
+  if (divMarca) {
+    divMarca.innerHTML = ''; // Limpar o conteúdo atual da div
+    divMarca.appendChild(novoCard);
+  }
 
-      const divMarca = document.querySelector(`[data-marca="${marcaSelecionada}"]`);
-      if (divMarca) {
-        divMarca.appendChild(novoCard);
-      }
-
-      // lista com os cards
-      const taskList = JSON.parse(localStorage.getItem('tasks')) || [];
-
-      // Adicionar o novo card à lista 
-      const newTaskText = `${nome} ${valor} ${valorParcelado} ${imagem}`;
-      taskList.push(newTaskText);
-      localStorage.setItem('tasks', JSON.stringify(taskList));
-    }
-
-    // Adicione o event listener para a função cadastrarProduto
-    document.querySelector('.btn-cadastrar').addEventListener('click', cadastrarProduto);
-    return _produto;
-  })(window);
+  // lista com os cards
+  const taskList = JSON.parse(localStorage.getItem('tasks')) || [];
   
+  // Adicionar o novo card à lista 
+  const newTaskText = `${nome} ${valor} ${valorParcelado} ${imagemProduto}`;
+  taskList.push(newTaskText);
+  localStorage.setItem('tasks', JSON.stringify(taskList));
+  
+  // Adicione o event listener para a função cadastrarProduto
+  document.querySelector('.btn-cadastrar').addEventListener('click', criarCard);
+
 }
+
 
 
 
