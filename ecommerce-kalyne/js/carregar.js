@@ -22,6 +22,8 @@ function formatarMoeda(input) {
   input.value = `${valor.replace(".", ",")}`; // Adiciona "R$" e substitui o ponto por vírgula
 }
 
+//-----------------------------------------------------------------------
+//CADASTRO PRODUTOS
 function cadastrarProduto() {
   alert('foi clicado');
 
