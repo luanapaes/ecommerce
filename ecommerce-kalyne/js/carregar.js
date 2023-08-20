@@ -24,21 +24,21 @@ function formatarMoeda(input) {
 
 //-----------------------------------------------------------------------
 //CADASTRO PRODUTOS
-var arrProdutos = [];
-
 function criarCard() {
+  var arrProdutos = [];
   var nome = document.querySelector('#nome-produto').value;
   var valor = document.querySelector('#valor-produto').value;
   var valorParcelado = document.querySelector('#valor-parcelado').value;
-  var marcaSelecionada = document.querySelector('#select').value;
+  var marcaSelecionadaElement = document.getElementById('select');
+  var marcaSelecionada = marcaSelecionadaElement.value;
   var imagemProduto = document.querySelector('#uploaded-image').src;
 
   function Produto(nome, valor, marcaSelecionada, valorParcelado, imagemProduto) {
-    this.nome = nome;
-    this.valor = valor;
-    this.marcaSelecionada = marcaSelecionada;
-    this.valorParcelado = valorParcelado;
-    this.imagemProduto = imagemProduto;
+    var nome = nome;
+    var valor = valor;
+    var marcaSelecionada = marcaSelecionada;
+    var valorParcelado = valorParcelado;
+    var imagemProduto = imagemProduto;
   }
 
   var novoProduto = new Produto(nome, valor, marcaSelecionada, valorParcelado, imagemProduto);
@@ -56,7 +56,7 @@ function criarCard() {
     `;
   const divMarca = document.querySelector(`[data-marca="${marcaSelecionada}"]`);
   if (divMarca) {
-    divMarca.innerHTML = ''; // Limpar o conteúdo atual da div
+    divMarca.innerHTML = ''; // Limpa o conteúdo atual da div
     divMarca.appendChild(novoCard);
   }
 
@@ -72,7 +72,6 @@ function criarCard() {
   document.querySelector('.btn-cadastrar').addEventListener('click', criarCard);
 
 }
-
 
 
 

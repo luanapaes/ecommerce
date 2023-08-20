@@ -29,14 +29,8 @@ function handleBuyButtonClick(event) {
   window.open(urlWhatsApp, "_blank");
 }
 
-
-
 function entrar() {
   window.location = 'login.html';
-}
-
-function cdProdutos() {
-  window.location.href = 'cadastro-produtos.html';
 }
 
 
