@@ -9,11 +9,12 @@
 </head>
 <body>
     <div class="gridContainer">
-        <button onclick="voltar()" class="voltar">
+        <button onclick="voltar()" class="btn-action">
             <i class="fas fa-arrow-left"></i>
         </button>
+
         <h1 class="title-marca">Produtos Eudora</h1>
-        <div class="marca marca-eudora" id="eudora" data-marca="eudora">
+        <div class="marca" id="marca-eudora" data-marca="eudora">
             <div class="card">
                 <img src="./image/eudora/batom-mattetint-removebg-preview.png" alt="">
                 <h2 class="titleCard">Batom Matte Tint</h2>
@@ -63,17 +64,17 @@
                 <i>ou 3x de R$32,00</i>
                 <button class="buy-button" data-produto="Kit Instance Baunilha" onclick="handleBuyButtonClick(event)">Clique para comprar</button>
             </div>
-            <div class="card">
+             <div class="card">
                 <img src="./image/eudora/kit-skincare-ninasecrets-removebg-preview.png" alt="">
                 <h2 class="titleCard">Kit SkinCare Nina Secrets</h2>
                 <p id="preco">R$80,00</p>
                 <i>ou 2x de R$40,00</i>
                 <button class="buy-button" data-produto="Kit SkinCare Nina Secrets" onclick="handleBuyButtonClick(event)">Clique para comprar</button>
-            </div>
-            
+            </div>   
         </div>
     </div>
 
     <script src="./js/script.js"></script>
+    <script src="./js/cardEudora.js"></script>
 </body>
 </html>

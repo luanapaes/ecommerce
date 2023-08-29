@@ -12,9 +12,10 @@
 </head>
 
 <body>
-    <button onclick="voltar()" class="voltar">
+    <button onclick="voltar()" class="btn-action">
         <i class="fas fa-arrow-left"></i>
     </button>
+
     <h1 class="title-cadastro">Cadastrar Produto</h1>
     <div class="cardCadastro">
         <div class="upload-container form card">
@@ -30,23 +31,28 @@
 
             <label for="valor">Valor do produto</label>
             <input class="input" type="text" id="valor-produto" oninput="formatarMoeda(this)">
+            
+            <label for="valor">Parcelas</label>
+            <input class="input" type="number" id="parcelas">
 
-            <label for="valor">Valor parcelado</label>
+            <label for="valor">Valor das parcelas</label>
             <input class="input" type="text" id="valor-parcelado" oninput="formatarMoeda(this)">
 
 
             <label for="select">Marca:</label>
-            <select name="select" id="select">
-                <option value="" disabled selected>Marca</option>
+            <select name="select" id="marcaEscolhida" class="select">
+                <option value="marca" disabled selected>Marca</option>
                 <option value="natura">Natura</option>
                 <option value="oboticario">oBoticário</option>
                 <option value="eudora">Eudora</option>
                 <option value="hinode">Hinode</option>
             </select>
 
-            <button type="button" class="btn-cadastrar" onclick="criarCard()">Cadastrar Produto</button>
+            <button type="button" class="btn-cadastrar" id="criarCard" >Cadastrar Produto</button>
         </div>
     </div>
+
+
     <script src="./js/carregar.js"></script>
 
 </body>
