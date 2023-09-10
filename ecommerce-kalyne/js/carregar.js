@@ -67,6 +67,7 @@ criarCard.addEventListener('click', () => {
   const parcelaProduto = parcelas.value.trim();
   
   console.log(imageProdutoCadastrado);
+  alert('Produto cadastrado!')
 
   var novoProduto = new produto(marcaEscolhida, imageProdutoCadastrado, nomeProdutoCadastrado, valorProdutoCadastrado, valorProdutoParcelado, parcelaProduto)
 
